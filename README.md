@@ -15,7 +15,8 @@ I sampled 10,000 transactions from a 30-day window, then introduced controlled b
 - 15 missing records
 - 10 amount mismatches
 - 3 duplicated transactions, appearing as 6 entries in the bank statement
-
+  
+## Verification
 I verified my reconciliation query caught all of them by cross-checking the query's flagged results against a documented list of the introduced breaks — using a `transaction_id` comparison to confirm the missing records, and a dedicated `amount_mismatch_original` audit table (capturing original amounts before alteration) to confirm the mismatches.
 
 ## Key Findings
