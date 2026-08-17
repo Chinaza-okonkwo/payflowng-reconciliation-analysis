@@ -19,6 +19,7 @@ I sampled 10,000 transactions from a 30-day window, then introduced controlled b
 ## Verification
 I verified my reconciliation query caught all of them by cross-checking the query's flagged results against a documented list of the introduced breaks — using a `transaction_id` comparison to confirm the missing records, and a dedicated `amount_mismatch_original` audit table (capturing original amounts before alteration) to confirm the mismatches.
 
+[Reconciliation Dashboard Summary](verification_screenshot.png 1, verification_screenshot.png 2)
 ## Key Findings
 - 10,003 total line items
 - 99.86% reconciled by value
